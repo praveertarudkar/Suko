@@ -46,7 +46,7 @@ const ProductDetail = () => {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-16">
         
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-body mb-8">
+        <div className="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-body mb-8">
           <Link to="/" className="hover:text-foreground">Home</Link>
           <span>/</span>
           <Link to={`/collection/${product.category}`} className="hover:text-foreground">{product.category}</Link>
@@ -65,7 +65,7 @@ const ProductDetail = () => {
                   onClick={() => setActiveImage(i)}
                   className={`relative w-20 aspect-[3/4] shrink-0 bg-[#15151a] overflow-hidden transition-all ${activeImage === i ? "ring-1 ring-foreground opacity-100" : "opacity-50 hover:opacity-100"}`}
                 >
-                  <img src={img} alt={`${product.name} view ${i + 1}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`${product.name} view ${i + 1}`} className="w-full h-full object-cover object-top" />
                 </button>
               ))}
             </div>
@@ -76,7 +76,7 @@ const ProductDetail = () => {
               transition={{ duration: 0.5 }}
               className="flex-1 aspect-[3/4] bg-[#15151a] overflow-hidden"
             >
-              <img src={product.images[activeImage]} alt={product.name} className="w-full h-full object-cover" />
+              <img src={product.images[activeImage]} alt={product.name} className="w-full h-full object-cover object-top" />
             </motion.div>
           </div>
 

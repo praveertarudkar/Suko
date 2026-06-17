@@ -26,13 +26,13 @@ const ProductCard = ({ product, index = 0 }) => {
           <img
             src={primary}
             alt={product.name}
-            className={`absolute inset-0 w-full h-full object-cover product-img transition-opacity duration-700 ${hover ? "opacity-0" : "opacity-100"}`}
+            className={`absolute inset-0 w-full h-full object-cover object-top product-img transition-opacity duration-700 ${hover ? "opacity-0" : "opacity-100"}`}
           />
           <img
             src={secondary}
             alt=""
             aria-hidden="true"
-            className={`absolute inset-0 w-full h-full object-cover product-img transition-opacity duration-700 ${hover ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 w-full h-full object-cover object-top product-img transition-opacity duration-700 ${hover ? "opacity-100" : "opacity-0"}`}
           />
           {product.badge && (
             <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.25em] font-body bg-background/70 backdrop-blur-md px-3 py-1.5 text-foreground/90">

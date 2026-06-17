@@ -43,7 +43,7 @@ const GlobalBackground = () => {
   if (pathname === "/") return null;
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="fixed inset-0 z-[-1] pointer-events-none opacity-40 md:opacity-100">
       <Aurora 
         colorStops={["#ffffff", "#000000", "#94a3b8"]}
         blend={0.5} 
