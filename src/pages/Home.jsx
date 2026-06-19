@@ -78,6 +78,7 @@ const Home = () => {
               loop
               muted
               playsInline
+              preload="auto"
               className="absolute inset-0 w-full h-full object-cover"
               src={slide.video}
             />
@@ -224,7 +225,7 @@ const Home = () => {
           loop
           muted
           playsInline
-          preload="none"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/7%20sec.mp4" type="video/mp4" />

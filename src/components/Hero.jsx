@@ -9,6 +9,7 @@ export default function Hero() {
         muted 
         loop 
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
         poster="https://images.unsplash.com/photo-1600091166971-7f9faad6c1e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBtZW4lMjB0YWlsb3JlZCUyMHN1aXQlMjBkYXJrfGVufDB8fHx8MTc4MTI0NTE1Nnww&ixlib=rb-4.1.0&q=85"
       >
