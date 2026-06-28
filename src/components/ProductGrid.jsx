@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const suits = [
-  { id: 1, name: "The Midnight Tuxedo", price: "₹85,000", image: "https://images.unsplash.com/photo-1600091166971-7f9faad6c1e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBtZW4lMjB0YWlsb3JlZCUyMHN1aXQlMjBkYXJrfGVufDB8fHx8MTc4MTI0NTE1Nnww&ixlib=rb-4.1.0&q=85" },
-  { id: 2, name: "Charcoal Wool Suit", price: "₹65,000", image: "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtZW4lMjB0YWlsb3JlZCUyMHN1aXQlMjBkYXJrfGVufDB8fHx8MTc4MTI0NTE1Nnww&ixlib=rb-4.1.0&q=85" },
-  { id: 3, name: "Navy Pinstripe Suit", price: "₹72,000", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBtZW4lMjB0YWlsb3JlZCUyMHN1aXQlMjBkYXJrfGVufDB8fHx8MTc4MTI0NTE1Nnww&ixlib=rb-4.1.0&q=85" },
-  { id: 4, name: "Classic Black Double Breasted", price: "₹90,000", image: "https://images.unsplash.com/photo-1611937663641-5cef5189d71b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBtZW4lMjB0YWlsb3JlZCUyMHN1aXQlMjBkYXJrfGVufDB8fHx8MTc4MTI0NTE1Nnww&ixlib=rb-4.1.0&q=85" }
+  { id: 1, name: "The Obsidian Tuxedo Suit", price: "₹85,000", image: "/images/female_corp_suit_1.png" },
+  { id: 2, name: "Charcoal Worsted Suit", price: "₹65,000", image: "/images/female_corp_suit_2.png" },
+  { id: 3, name: "Navy Pinstripe Suit", price: "₹72,000", image: "/images/female_clean_1_1781334564171.png" },
+  { id: 4, name: "Classic Black Contoured Suit", price: "₹90,000", image: "/images/female_clean_2_1781334574968.png" }
 ];
 
 export default function ProductGrid() {
@@ -14,7 +14,7 @@ export default function ProductGrid() {
         <div className="mb-16 sm:mb-24">
           <h2 className="text-4xl sm:text-5xl tracking-tight font-medium mb-6">Tailored Suits</h2>
           <p className="text-foreground/80 max-w-xl leading-relaxed">
-            Meticulously crafted from the finest European fabrics. Our signature silhouettes designed for the modern gentleman, ensuring both comfort and authority.
+            Meticulously crafted from the finest European fabrics. Our signature silhouettes designed for the modern female leader, ensuring both comfort and authority.
           </p>
         </div>
 

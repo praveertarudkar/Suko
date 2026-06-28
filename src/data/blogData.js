@@ -3,15 +3,15 @@ export const BLOG_POSTS = [
     id: 1,
     title: "The Return of the Double-Breasted Suit",
     excerpt: "Why this classic power silhouette is making a massive comeback in the boardroom and beyond.",
-    image: "/images/mens_suit_1_1781520258841.png",
+    image: "/images/female_corp_suit_1.png",
     date: "Oct 15, 2026",
-    category: "Menswear Trends",
+    category: "Womenswear Trends",
     content: `
-      <p>For decades, the single-breasted suit has dominated the modern professional wardrobe, favored for its simplicity and ease. However, the pendulum of menswear is swinging back toward structure and formality. The double-breasted suit, once associated with 1980s Wall Street excess or 1930s gangster cinema, has been meticulously refined for the contemporary gentleman.</p>
+      <p>For decades, tailoring has evolved, but the pendulum of womenswear is swinging back toward structure, presence, and formality. The double-breasted suit, once associated with traditional corporate uniforms, has been meticulously refined for the contemporary executive woman.</p>
       
-      <p>Today's double-breasted silhouettes feature higher armholes, softer shoulders, and a more suppressed waist. This "soft tailoring" approach removes the boxiness of previous eras, resulting in a garment that commands respect while remaining incredibly flattering. When tailored correctly, the overlapping front creates a V-shape that broadens the chest and slims the waist.</p>
+      <p>Today's double-breasted silhouettes feature contoured waists, structured shoulders, and fluid drapes. This "soft tailoring" approach removes the rigidity of previous eras, resulting in a garment that commands respect while remaining incredibly elegant and flattering. When tailored correctly, the overlapping front creates a sharp, commanding neckline.</p>
       
-      <p>When styling the modern double-breasted jacket, remember that it is a statement piece. Pair it with a simple spread-collar shirt and a subtle, textured tie. Leave the bottom-most button unfastened for a touch of sprezzatura, and embrace the return of undeniable sartorial power.</p>
+      <p>When styling the modern double-breasted jacket, remember that it is a standalone statement. Pair it with a simple silk shirt or wear it buttoned up over high-waisted trousers. It's the ultimate expression of modern power dressing.</p>
     `
   },
   {
@@ -48,15 +48,15 @@ export const BLOG_POSTS = [
     id: 4,
     title: "Pinstripes Reimagined",
     excerpt: "The heritage pattern is back, but modern proportions and styling have given it a completely new life.",
-    image: "/images/mens_suit_2_1781520272525.png",
+    image: "/images/female_corp_suit_2.png",
     date: "Oct 02, 2026",
-    category: "Menswear Trends",
+    category: "Womenswear Trends",
     content: `
-      <p>The pinstripe suit is an icon of the banking world, historically signaling authority and conservative traditionalism. But over the past few seasons, top tailoring houses have reclaimed the pinstripe, injecting it with a desperately needed dose of modern flair.</p>
+      <p>The pinstripe suit is an icon of the corporate world, historically signaling authority and conservative traditionalism. But over the past few seasons, luxury tailoring houses have reclaimed the pinstripe, injecting it with a desperately needed dose of modern femininity.</p>
       
-      <p>The new pinstripe is less severe. The stripes themselves are often spaced wider apart (chalk stripes) or rendered in softer contrasts, such as a subtle charcoal stripe on a slate grey background. The cuts have also evolved, moving away from rigid armor toward softer, more fluid Italian-style tailoring.</p>
+      <p>The new pinstripe is less severe. The stripes themselves are often spaced wider apart (chalk stripes) or rendered in softer contrasts, such as a subtle charcoal stripe on a slate grey background. The cuts have also evolved, moving away from rigid lines toward softer, more fluid Italian-style tailoring that contour the silhouette beautifully.</p>
       
-      <p>To wear the modern pinstripe, break the rules. Instead of pairing it with a stiff poplin shirt and a foulard tie, try wearing a pinstripe suit with a fine-gauge merino wool turtleneck, or break the suit up, wearing the pinstripe trousers with a solid navy blazer. It's about taking a heritage pattern and making it entirely your own.</p>
+      <p>To wear the modern pinstripe, break the rules. Instead of pairing it with a stiff button-up, try wearing a pinstripe suit with a fine-gauge merino wool turtleneck, or break the suit up, wearing the pinstripe trousers with a solid silk camisole and structured blazer. It's about taking a heritage pattern and making it entirely your own.</p>
     `
   },
   {
@@ -78,15 +78,15 @@ export const BLOG_POSTS = [
     id: 6,
     title: "The Anatomy of a Perfect White Poplin Shirt",
     excerpt: "We break down what makes the ultimate formal white shirt, from the collar spread to the cuff weight.",
-    image: "/images/mens_shirt_1_1781520285093.png",
+    image: "/images/female_corp_shirt_1.png",
     date: "Sep 20, 2026",
     category: "Wardrobe Essentials",
     content: `
-      <p>It is the blank canvas upon which all formalwear is built. The crisp white poplin shirt is perhaps the most crucial element in a gentleman's wardrobe, yet it is so often an afterthought. To truly elevate your tailoring, you must understand what separates a mediocre shirt from a masterpiece.</p>
+      <p>It is the blank canvas upon which all formalwear is built. The crisp white poplin shirt is perhaps the most crucial element in an executive wardrobe, yet it is so often an afterthought. To truly elevate your tailoring, you must understand what separates a mediocre shirt from a masterpiece.</p>
       
-      <p>First is the fabric. A high-quality poplin should be woven from long-staple cotton (like Egyptian or Sea Island), offering a silky hand-feel and excellent durability. The collar must have sufficient interlining to stand up straight without collapsing under the weight of a jacket lapel. A semi-spread collar remains the most versatile choice, accommodating both four-in-hand and Windsor knots gracefully.</p>
+      <p>First is the fabric. A high-quality poplin should be woven from long-staple cotton (like Egyptian or Sea Island), offering a silky hand-feel and excellent durability. The collar must have sufficient interlining to stand up straight without collapsing under the weight of a jacket lapel. A semi-spread collar remains the most versatile choice, accommodating both formal occasions and relaxed client meetings.</p>
       
-      <p>Attention to detail sets the best shirts apart. Look for single-needle stitching along the side seams (which prevents puckering after washing), thick mother-of-pearl buttons sewn on a shank, and French cuffs with a firm but not rigid interlining. It is these invisible details that create a flawless presentation.</p>
+      <p>Attention to detail sets the best shirts apart. Look for single-needle stitching along the side seams, thick mother-of-pearl buttons sewn on a shank, and French cuffs with a firm but not rigid interlining. It is these invisible details that create a flawless presentation.</p>
     `
   },
   {
@@ -97,24 +97,24 @@ export const BLOG_POSTS = [
     date: "Sep 15, 2026",
     category: "Etiquette",
     content: `
-      <p>Of all the dress codes listed on modern invitations, "Black Tie Optional" is undoubtedly the most anxiety-inducing. It presents a frustrating ambiguity: Should you wear a tuxedo and risk being overdressed, or wear a suit and risk looking underdressed compared to the host?</p>
+      <p>Of all the dress codes listed on modern invitations, "Black Tie Optional" is undoubtedly the most anxiety-inducing. It presents a frustrating ambiguity: Should you wear a full tuxedo gown/suit and risk being overdressed, or wear a cocktail suit and risk looking underdressed compared to the host?</p>
       
-      <p>The golden rule of "Black Tie Optional" is this: The host intends to wear a tuxedo, and they would prefer if you did too, but they don't want to exclude guests who don't own one. If you have a well-fitting tuxedo, this is the time to wear it. You will never be faulted for honoring the upper limit of the dress code.</p>
+      <p>The golden rule of "Black Tie Optional" is this: The host intends to wear a tuxedo, and they would prefer if you did too, but they don't want to exclude guests who don't own one. If you have a well-fitting tuxedo suit, this is the time to wear it. You will never be faulted for honoring the upper limit of the dress code.</p>
       
-      <p>If you choose not to wear a tuxedo, you must still adhere to the utmost formality. This means a dark, solid-colored suit (navy or charcoal, never light grey or brown), a pristine white dress shirt, and a conservative, dark silk tie. Black polished oxfords are mandatory. The goal is to look as close to black-tie elegance as possible without actually crossing the threshold.</p>
+      <p>If you choose not to wear a tuxedo suit, you must still adhere to the utmost formality. This means a dark, solid-colored suit (navy or charcoal, never light grey or brown), a pristine white dress shirt, and conservative accessories. The goal is to look as close to black-tie elegance as possible without actually crossing the threshold.</p>
     `
   },
   {
     id: 8,
     title: "Why Heavyweight Flannel is the Ultimate Winter Fabric",
-    excerpt: "Discover the drape and warmth of Fox Brothers flannel, and why every gentleman needs a flannel trouser.",
-    image: "/images/mens_trouser_1_1781520311808.png",
+    excerpt: "Discover the drape and warmth of Fox Brothers flannel, and why every executive needs a flannel trouser.",
+    image: "/images/female_corp_trouser_1.png",
     date: "Sep 10, 2026",
     category: "Fabric Focus",
     content: `
-      <p>When the temperature plummets, standard worsted wool suits can leave you shivering on the platform. Enter heavyweight flannel, the unsung hero of the winter wardrobe. True woolen flannel has a brushed surface that traps air, providing exceptional insulation without requiring bulky layers.</p>
+      <p>When the temperature plummets, standard lightweight suits can leave you shivering on the platform. Enter heavyweight flannel, the unsung hero of the winter wardrobe. True woolen flannel has a brushed surface that traps air, providing exceptional insulation without requiring bulky layers.</p>
       
-      <p>But the true magic of a 13oz or 14oz flannel isn't just its warmth; it's the drape. Heavyweight fabrics fall beautifully, holding a razor-sharp crease and resisting wrinkles far better than their lightweight counterparts. A grey flannel trouser, in particular, is perhaps the most versatile separate you can own, pairing effortlessly with everything from a navy blazer to a chunky cashmere knit.</p>
+      <p>But the true magic of a 13oz or 14oz flannel isn't just its warmth; it's the drape. Heavyweight fabrics fall beautifully, holding a razor-sharp crease and resisting wrinkles far better than their lightweight counterparts. A grey flannel trouser, in particular, is perhaps the most versatile separate you can own, pairing effortlessly with everything from a structured navy blazer to a chunky cashmere knit.</p>
       
       <p>While modern trends have pushed toward increasingly lightweight fabrics year-round, those in the know understand that a bespoke or made-to-measure garment truly comes alive when crafted from substantial cloth. Embrace the weight, and enjoy the unparalleled comfort and style of true winter flannel.</p>
     `
@@ -131,22 +131,22 @@ export const BLOG_POSTS = [
       
       <p>What makes the female three-piece so compelling is its versatility. Worn as a complete ensemble, it is a formidable, commanding look perfect for high-stakes boardrooms or formal evening events. However, the pieces can be broken down. A tailored waistcoat worn on its own over bare skin with wide-leg trousers has become a definitive evening look for the fashion-forward.</p>
       
-      <p>When shopping for a three-piece suit, pay close attention to the cut of the waistcoat. It should nip in at the waist and sit flush against the torso without pulling. Whether rendered in classic worsted wool or a more daring velvet, this is a trend that perfectly balances traditional authority with contemporary sensuality.</p>
+      <p>When shopping for a three-piece suit, pay close attention to the cut of the waistcoat. It should nip in at the waist and sit flush against the torso without pulling. Whether rendered in classic worsted wool or a more daring velvet, this is a trend that perfectly balances traditional authority with contemporary elegance.</p>
     `
   },
   {
     id: 10,
     title: "Accessorizing Formalwear: Less is More",
     excerpt: "The art of subtle accessories to elevate your formal look without distracting from the tailoring.",
-    image: "/images/mens_blazer_1_1781520298090.png",
+    image: "/images/female_corp_blazer_1.png",
     date: "Aug 28, 2026",
     category: "Styling Advice",
     content: `
       <p>A beautifully tailored suit is a masterpiece of design and engineering. The quickest way to ruin that masterpiece is by over-accessorizing. In the realm of luxury formalwear, restraint is always more sophisticated than abundance.</p>
       
-      <p>Consider the pocket square. A simple white linen square with hand-rolled edges, folded into a crisp TV fold, speaks of quiet confidence. A brightly colored, overly patterned silk square exploding from the pocket often looks like a desperate cry for attention. Let the cut of your jacket be the focal point.</p>
+      <p>Consider the accessories. A simple silk scarf, classic leather strap watch, or subtle gold hoops speak of quiet confidence. Let the cut of your jacket be the focal point. Overly complicated or noisy jewelry often distracts from the impeccable tailoring.</p>
       
-      <p>The same rule applies to jewelry. A classic dress watch on a black leather strap, perhaps a subtle set of cufflinks, and a signet ring are more than enough. Avoid excessive lapel pins, tie bars, and collar pins worn simultaneously. Remember: true elegance is knowing when to stop.</p>
+      <p>The same rule applies to footwear. A classic structured pump or clean leather loafer is more than enough. Remember: true elegance is knowing when to stop.</p>
     `
   }
 ];

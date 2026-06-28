@@ -32,14 +32,23 @@ module.exports = {
         borderMuted: "#EAEAEA",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "Inter", "sans-serif"],
-        serif: ["Playfair Display", "Georgia", "serif"],
+        sans: ["var(--font-geist-sans)", "Jost", "sans-serif"],
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
       },
       letterSpacing: {
         tighter: "-0.04em",
         tight: "-0.02em",
         widest: "0.15em",
-      }
+      },
+      animation: {
+        aurora: "aurora 60s linear infinite",
+      },
+      keyframes: {
+        aurora: {
+          from: { backgroundPosition: "50% 50%, 50% 50%" },
+          to: { backgroundPosition: "350% 50%, 350% 50%" },
+        },
+      },
     },
   },
   plugins: [],

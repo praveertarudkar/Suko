@@ -4,13 +4,13 @@ import { Toaster } from "sonner";
 import { ReactLenis } from "lenis/react";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
-import Aurora from "./components/Aurora";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
 import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
 import PageWrapper from "./components/PageWrapper";
+import Aurora from "./components/Aurora";
 
 // Lazy-loaded routes
 const Home = lazy(() => import("./pages/Home"));
@@ -23,6 +23,7 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Checkout = lazy(() => import("./pages/Checkout"));
 const Wishlist = lazy(() => import("./pages/Wishlist"));
+const Inventory = lazy(() => import("./pages/Inventory"));
 
 const PageLoader = () => (
   <div className="fixed inset-0 flex items-center justify-center bg-[#0F0F11] z-50">
@@ -39,17 +40,9 @@ const ScrollToTop = () => {
 };
 
 const GlobalBackground = () => {
-  const { pathname } = useLocation();
-  if (pathname === "/") return null;
-
   return (
-    <div className="fixed inset-0 z-[-1] pointer-events-none opacity-40 md:opacity-100">
-      <Aurora 
-        colorStops={["#ffffff", "#000000", "#94a3b8"]}
-        blend={0.5} 
-        amplitude={1.0} 
-        speed={0.5} 
-      />
+    <div className="fixed inset-0 z-[0] pointer-events-none opacity-40 mix-blend-screen" style={{ maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)' }}>
+      <Aurora colorStops={["#1e3a8a", "#3b82f6", "#0f172a"]} amplitude={0.8} blend={0.6} speed={0.3} />
     </div>
   );
 };
@@ -66,6 +59,7 @@ const AnimatedRoutes = () => {
           <Route path="/collection/:category" element={<PageWrapper><Collection /></PageWrapper>} />
           <Route path="/product/:slug" element={<PageWrapper><ProductDetail /></PageWrapper>} />
           <Route path="/wishlist" element={<PageWrapper><Wishlist /></PageWrapper>} />
+          <Route path="/inventory" element={<PageWrapper><Inventory /></PageWrapper>} />
           <Route path="/lookbook" element={<PageWrapper><Lookbook /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
           <Route path="/blog/:id" element={<PageWrapper><BlogPost /></PageWrapper>} />

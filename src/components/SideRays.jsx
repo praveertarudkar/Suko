@@ -75,10 +75,16 @@ const SideRays = ({
 
       if (!containerRef.current) return;
 
-      const renderer = new Renderer({
-        dpr: Math.min(window.devicePixelRatio, 2),
-        alpha: true
-      });
+      let renderer;
+      try {
+        renderer = new Renderer({
+          dpr: Math.min(window.devicePixelRatio, 2),
+          alpha: true
+        });
+      } catch (e) {
+        console.error("WebGL context creation failed:", e);
+        return;
+      }
       rendererRef.current = renderer;
 
       const gl = renderer.gl;

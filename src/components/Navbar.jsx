@@ -9,6 +9,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/collection", label: "Shop" },
+  { to: "/inventory", label: "Inventory" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
@@ -18,17 +19,9 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
   const { openCart, count } = useCart();
   const { count: wishlistCount } = useWishlist();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [actionsOpen, setActionsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
@@ -39,7 +32,7 @@ const Navbar = () => {
         <div className={`relative max-w-[1600px] mx-auto px-6 lg:px-12 py-5 lg:py-8 flex ${isHome ? 'items-start' : 'items-center'} justify-between pointer-events-auto`}>
           
           {/* Left Side: Logo */}
-          <div className="flex items-center flex-1">
+          <div className="flex items-start flex-1">
             {/* Logo */}
             <div>
               <Link to="/" data-testid="nav-logo" className="font-body font-bold text-2xl lg:text-4xl tracking-[0.35em] text-white select-none relative">
@@ -53,28 +46,28 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Right Side: Links + Actions */}
+          {/* Center: Links */}
+          <nav className={`hidden lg:flex items-center justify-center flex-1 gap-6 lg:gap-8 z-10 ${isHome ? 'mt-[13px]' : 'mt-[10px]'}`}>
+            {links.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                data-testid={`nav-${l.label.toLowerCase()}-link`}
+                className={({ isActive }) =>
+                  `text-[11px] uppercase tracking-[0.25em] font-body transition-all duration-300 relative group py-1 ${
+                    isActive ? "text-white font-medium" : "text-white/60 hover:text-white"
+                  }`
+                }
+              >
+                {/* Active indicator line */}
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full [[aria-current='page']_&]:w-full"></span>
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* Right Side: Actions */}
           <div className="hidden lg:flex items-center justify-end relative flex-1 gap-12">
-            
-            {/* Links */}
-            <nav className="hidden lg:flex items-center justify-center gap-8 z-10">
-              {links.map((l) => (
-                <NavLink
-                  key={l.to}
-                  to={l.to}
-                  data-testid={`nav-${l.label.toLowerCase()}-link`}
-                  className={({ isActive }) =>
-                    `text-[11px] uppercase tracking-[0.25em] font-body transition-all duration-300 relative group py-1 ${
-                      isActive ? "text-white font-medium" : "text-white/60 hover:text-white"
-                    }`
-                  }
-                >
-                  {/* Active indicator line */}
-                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full [[aria-current='page']_&]:w-full"></span>
-                  {l.label}
-                </NavLink>
-              ))}
-            </nav>
             <button 
               onClick={() => setActionsOpen(!actionsOpen)}
               className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300"

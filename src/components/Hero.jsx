@@ -13,7 +13,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
         poster="https://images.unsplash.com/photo-1600091166971-7f9faad6c1e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBtZW4lMjB0YWlsb3JlZCUyMHN1aXQlMjBkYXJrfGVufDB8fHx8MTc4MTI0NTE1Nnww&ixlib=rb-4.1.0&q=85"
       >
-        <source src="https://cdn.coverr.co/videos/coverr-a-man-in-a-suit-walking-down-the-street-5152/1080p.mp4" type="video/mp4" />
+        <source src="/hero_compressed.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay Gradient */}

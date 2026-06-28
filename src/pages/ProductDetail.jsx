@@ -30,7 +30,7 @@ const ProductDetail = () => {
   }
 
   const related = getProductsByCategory(product.category)
-    .filter(p => p.id !== product.id)
+    .filter(p => p.id !== product.id && p.gender === product.gender)
     .slice(0, 4);
 
   const handleAdd = () => {
@@ -84,7 +84,9 @@ const ProductDetail = () => {
           <div className="lg:col-span-5 flex flex-col justify-center">
             <span className="text-[10px] uppercase tracking-[0.3em] text-foreground/45 font-body block mb-4">— {product.fabric}</span>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tighter mb-4">{product.name}</h1>
-            <p className="font-body text-xl mb-8">{formatINR(product.price)}</p>
+            {product.price != null && (
+              <p className="font-body text-xl mb-8">{formatINR(product.price)}</p>
+            )}
             
             <p className="text-foreground/65 font-body leading-relaxed mb-10">
               {product.description}

@@ -52,7 +52,9 @@ const ProductCard = ({ product, index = 0 }) => {
               {product.fabric}
             </p>
           </div>
-          <span className="font-body text-sm whitespace-nowrap">{formatINR(product.price)}</span>
+          {product.price != null && (
+            <span className="font-body text-sm whitespace-nowrap">{formatINR(product.price)}</span>
+          )}
         </div>
       </Link>
     </motion.div>

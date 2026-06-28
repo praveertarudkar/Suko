@@ -1,63 +1,85 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Aurora from "./Aurora";
 
 const Footer = () => {
+  const location = useLocation();
+  // Check if we are on pages that shouldn't have top margin on the footer
+  const isCollectionLanding = location.pathname === "/collection" && !location.search;
+  const isInventory = location.pathname === "/inventory";
+  const removeMargin = isCollectionLanding || isInventory;
+
   return (
-    <footer data-testid="site-footer" className="border-t border-white/5 bg-[#0a0a0c]/40 backdrop-blur-md mt-32">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
-        <div className="col-span-2 lg:col-span-2 max-w-md">
-          <div className="font-display text-3xl tracking-[0.35em] mb-6">SUKO</div>
-          <p className="text-sm text-foreground/55 font-body leading-relaxed">
-            An atelier devoted to the modern executive. Hand-finished tailoring, considered fabrics, and quiet luxury for those who prefer the form to follow the man.
+    <footer data-testid="site-footer" className={`relative border-t border-white/5 bg-[#0a0a0c] overflow-hidden ${removeMargin ? '' : 'mt-32'}`}>
+      
+      {/* Aurora glow effect behind footer */}
+      <div className="absolute inset-0 pointer-events-none opacity-30 mix-blend-screen" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)' }}>
+        <Aurora colorStops={["#3b82f6", "#a5b4fc", "#93c5fd"]} amplitude={0.6} blend={0.8} speed={0.5} />
+      </div>
+      
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[300px] bg-white/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 lg:gap-10">
+        <div className="col-span-1 lg:col-span-2 max-w-md">
+          <Link to="/" className="inline-block font-display font-medium text-4xl tracking-[0.35em] mb-8 text-white hover:text-white/80 transition-colors">
+            SUKO
+          </Link>
+          <p className="text-sm text-foreground/50 font-body leading-relaxed mb-10">
+            An atelier devoted to the modern executive. Hand-finished tailoring, considered fabrics, and quiet luxury for those who prefer the form to follow the silhouette.
           </p>
-          <div className="mt-8 flex gap-4">
+          <div className="flex gap-4 items-end max-w-sm group">
             <input
               data-testid="newsletter-email-input"
               type="email"
               placeholder="Your email — for the private list"
-              className="flex-1 bg-transparent border-b border-white/15 focus:border-foreground outline-none py-3 px-1 text-sm font-body placeholder:text-foreground/35"
+              className="flex-1 bg-transparent border-b border-white/10 focus:border-white outline-none py-3 px-1 text-[13px] font-body placeholder:text-foreground/30 transition-colors duration-300"
             />
-            <button data-testid="newsletter-subscribe-btn" className="text-[10px] uppercase tracking-[0.3em] font-body hover:text-foreground/70 transition-colors">
-              Subscribe →
+            <button data-testid="newsletter-subscribe-btn" className="text-[10px] uppercase tracking-[0.3em] font-body text-white/50 group-hover:text-white transition-colors duration-300 pb-3 border-b border-transparent group-hover:border-white">
+              Subscribe
             </button>
           </div>
         </div>
 
         <div>
-          <h4 className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 mb-5 font-body">Atelier</h4>
-          <ul className="space-y-3 text-sm text-foreground/70 font-body">
-            <li><Link to="/about" className="hover:text-foreground transition-colors">Heritage</Link></li>
-            <li><Link to="/about" className="hover:text-foreground transition-colors">Craftsmanship</Link></li>
-            <li><Link to="/lookbook" className="hover:text-foreground transition-colors">Lookbook</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground transition-colors">Private Styling</Link></li>
+          <h4 className="text-[10px] uppercase tracking-[0.3em] text-white mb-8 font-body">Atelier</h4>
+          <ul className="space-y-4 text-[13px] text-foreground/50 font-body tracking-wide">
+            <li><Link to="/about" className="hover:text-white transition-colors duration-300">Heritage</Link></li>
+            <li><Link to="/about" className="hover:text-white transition-colors duration-300">Craftsmanship</Link></li>
+            <li><Link to="/lookbook" className="hover:text-white transition-colors duration-300">Lookbook</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors duration-300">Private Styling</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 mb-5 font-body">Shop</h4>
-          <ul className="space-y-3 text-sm text-foreground/70 font-body">
-            <li><Link to="/collection/shirts" className="hover:text-foreground transition-colors">Shirts</Link></li>
-            <li><Link to="/collection/suits" className="hover:text-foreground transition-colors">Suits</Link></li>
-            <li><Link to="/collection/blazers" className="hover:text-foreground transition-colors">Blazers</Link></li>
-            <li><Link to="/collection/trousers" className="hover:text-foreground transition-colors">Trousers</Link></li>
+          <h4 className="text-[10px] uppercase tracking-[0.3em] text-white mb-8 font-body">Shop</h4>
+          <ul className="space-y-4 text-[13px] text-foreground/50 font-body tracking-wide">
+            <li><Link to="/collection?category=shirts" className="hover:text-white transition-colors duration-300">Shirts</Link></li>
+            <li><Link to="/collection?category=suits" className="hover:text-white transition-colors duration-300">Suits</Link></li>
+            <li><Link to="/collection?category=blazers" className="hover:text-white transition-colors duration-300">Blazers</Link></li>
+            <li><Link to="/collection?category=trousers" className="hover:text-white transition-colors duration-300">Trousers</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 mb-5 font-body">Client</h4>
-          <ul className="space-y-3 text-sm text-foreground/70 font-body">
-            <li><Link to="/contact" className="hover:text-foreground transition-colors">Concierge</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground transition-colors">Fit Guide</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground transition-colors">Delivery</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground transition-colors">Returns</Link></li>
+          <h4 className="text-[10px] uppercase tracking-[0.3em] text-white mb-8 font-body">Client</h4>
+          <ul className="space-y-4 text-[13px] text-foreground/50 font-body tracking-wide">
+            <li><Link to="/contact" className="hover:text-white transition-colors duration-300">Concierge</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors duration-300">Fit Guide</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors duration-300">Delivery</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition-colors duration-300">Returns</Link></li>
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-white/5">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row justify-between gap-3 text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-body">
+      <div className="relative z-10 border-t border-white/5 bg-[#050505]">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-foreground/30 font-body">
           <span>© SUKO Atelier MMXXVI. All rights reserved.</span>
-          <span>Mumbai · Milan · London</span>
+          <div className="flex gap-6">
+            <span className="hover:text-white/70 transition-colors cursor-pointer">Mumbai</span>
+            <span className="hover:text-white/70 transition-colors cursor-pointer">Milan</span>
+            <span className="hover:text-white/70 transition-colors cursor-pointer">London</span>
+          </div>
         </div>
       </div>
     </footer>
