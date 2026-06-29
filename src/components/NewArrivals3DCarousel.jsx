@@ -24,7 +24,7 @@ const NewArrivals3DCarousel = ({ products }) => {
   };
 
   return (
-    <section className="py-24 md:py-32 overflow-hidden bg-[#050505] text-white relative border-t border-white/5 overscroll-x-none touch-pan-y select-none">
+    <section className="pt-8 pb-8 md:pt-12 md:pb-12 overflow-hidden bg-[#050505] text-white relative border-t border-white/5 overscroll-x-none touch-pan-y select-none">
       <div className="px-6 lg:px-16 max-w-[1600px] mx-auto mb-16 flex items-end justify-between relative z-20">
         <div>
           <span className="text-[10px] uppercase tracking-[0.4em] text-white/50 font-body block mb-4">— Season AW26</span>

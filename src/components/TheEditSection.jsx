@@ -19,7 +19,7 @@ const TheEditSection = () => {
   });
 
   return (
-    <section className="bg-[#050505] pt-32 pb-32">
+    <section className="bg-[#050505] pt-32 pb-8">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-16 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8 relative z-10">
         <div>
           <span className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/50 font-body mb-4 block">

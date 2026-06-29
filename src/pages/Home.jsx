@@ -9,6 +9,91 @@ import MagneticButton from "../components/MagneticButton";
 import { CATEGORIES, PRODUCTS, HERO_FALLBACK, LOOKBOOK } from "../data/products";
 import TheEditSection from "../components/TheEditSection";
 
+const WorkwearBento = () => {
+  return (
+    <section className="bg-[#0a0a0c] pt-8 pb-24 lg:pt-12 lg:pb-32 px-6 lg:px-16 border-b border-white/5 relative overflow-hidden">
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] -translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[150px] translate-x-1/2 pointer-events-none" />
+
+      <div className="max-w-[1400px] mx-auto relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="mb-16 text-center"
+        >
+           <span className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.4em] font-body mb-6 shadow-[0_0_15px_rgba(255,255,255,0.05)]">The Core Collection</span>
+           <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-tight text-white mb-6 drop-shadow-sm">Workwear Essentials</h2>
+           <p className="text-white/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
+             Discover our foundational pieces designed to elevate your daily professional wardrobe with unmatched precision and style.
+           </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 h-auto lg:h-[700px] w-full mt-12">
+          {/* Bento Item 1 */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-2 lg:row-span-2 relative rounded-[2rem] overflow-hidden group border border-white/10 bg-[#111113] h-[400px] lg:h-auto"
+          >
+            <img src="/images/womens_blazer_cover_1782656530913.png" alt="Tailored Blazer Set" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 ease-out" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+            <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end text-white">
+              <span className="bg-white/10 backdrop-blur-md px-3 py-1 text-[10px] uppercase tracking-[0.2em] rounded-full border border-white/20 w-fit mb-4">Womenswear</span>
+              <h3 className="font-display text-4xl lg:text-5xl tracking-tight mb-4 group-hover:text-white/90 transition-colors">Tailored Blazer Set</h3>
+              <p className="text-white/70 font-body max-w-md mb-8">Structured corporate wear crafted for confidence, comfort, and boardroom presence.</p>
+              <Link to="/collection" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] hover:text-white/70 transition-colors bg-white text-black px-6 py-3 rounded-full w-fit">
+                Explore Women <ArrowRight size={14} />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Bento Item 2 */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-1 lg:row-span-1 relative rounded-[2rem] overflow-hidden group border border-white/10 bg-[#111113] h-[350px] lg:h-auto"
+          >
+            <img src="/images/womens_shirt_cover_1782656518361.png" alt="Corporate Essential" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 ease-out" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/10" />
+            <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+              <h3 className="font-display text-3xl tracking-tight mb-3">Corporate Essential</h3>
+              <p className="text-white/70 font-body text-sm mb-6">Refined formalwear designed for daily elegance.</p>
+              <Link to="/collection" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] hover:text-white/70 transition-colors bg-white/10 border border-white/20 px-4 py-2 rounded-full w-fit">
+                View Collection <ArrowRight size={14} />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Bento Item 3 */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="lg:col-span-1 lg:row-span-1 relative rounded-[2rem] overflow-hidden group border border-white/10 bg-[#111113] h-[350px] lg:h-auto"
+          >
+            <img src="/images/suits_cover_1782652781025.png" alt="Executive Menswear" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 ease-out" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/10" />
+            <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+              <h3 className="font-display text-3xl tracking-tight mb-3">Executive Menswear</h3>
+              <p className="text-white/70 font-body text-sm mb-6">Sharp tailoring and minimal formalwear for the modern professional.</p>
+              <Link to="/collection" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] hover:text-white/70 transition-colors bg-white/10 border border-white/20 px-4 py-2 rounded-full w-fit">
+                Explore Men <ArrowRight size={14} />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Home = () => {
   const heroRef = useRef(null);
   const sliderRef = useRef(null);
@@ -181,96 +266,7 @@ const Home = () => {
 
       <NewArrivals3DCarousel products={featured} />
 
-      {/* WORKWEAR ESSENTIALS SECTION */}
-      <section className="bg-[#0a0a0c] py-20 lg:py-24 px-6 lg:px-16 border-b border-white/5">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="mb-16 text-center">
-             <span className="text-[10px] uppercase tracking-[0.4em] text-white/50 font-body mb-3 block">The Core Collection</span>
-             <h2 className="font-display text-4xl sm:text-5xl tracking-tight text-white">Workwear Essentials</h2>
-          </div>
-
-          <div className="flex flex-col gap-16 lg:gap-20">
-            {/* Block 1 */}
-            <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16 group">
-              <div className="w-full md:w-1/2 lg:w-5/12 overflow-hidden bg-[#111113] rounded-sm aspect-[4/5] relative border border-white/5">
-                <img 
-                  src="/images/womens_blazer_cover_1782656530913.png" 
-                  alt="Women's Tailored Blazer Set" 
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-[cubic-bezier(0.25,1,0.5,1)] opacity-90"
-                />
-              </div>
-              <div className="w-full md:w-1/2 lg:w-7/12 flex flex-col justify-center">
-                <h3 className="font-display text-3xl lg:text-4xl text-white tracking-tight mb-4">Tailored Blazer Set</h3>
-                <p className="text-white/60 font-body text-sm leading-relaxed mb-6 max-w-md">
-                  Structured corporate wear crafted for confidence, comfort, and boardroom presence.
-                </p>
-                <div className="flex flex-col gap-2 mb-8 text-white/40 text-[10px] font-body uppercase tracking-[0.2em]">
-                  <span className="flex items-center gap-3"><span className="w-3 h-[1px] bg-white/20"></span> Premium fabric</span>
-                  <span className="flex items-center gap-3"><span className="w-3 h-[1px] bg-white/20"></span> Sharp lapels</span>
-                  <span className="flex items-center gap-3"><span className="w-3 h-[1px] bg-white/20"></span> Modern fit</span>
-                </div>
-                <Link to="/collection" className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-white border border-white/20 px-6 py-3 w-fit hover:bg-white hover:text-black transition-all duration-500">
-                   Explore Women <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Block 2 (Reversed) */}
-            <div className="flex flex-col md:flex-row-reverse items-center gap-10 lg:gap-16 group">
-              <div className="w-full md:w-1/2 lg:w-5/12 overflow-hidden bg-[#111113] rounded-sm aspect-[4/5] relative border border-white/5">
-                <img 
-                  src="/images/womens_shirt_cover_1782656518361.png" 
-                  alt="Everyday Corporate Essential" 
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-[cubic-bezier(0.25,1,0.5,1)] opacity-90"
-                />
-              </div>
-              <div className="w-full md:w-1/2 lg:w-7/12 flex flex-col justify-center md:items-end md:text-right">
-                <h3 className="font-display text-3xl lg:text-4xl text-white tracking-tight mb-4">Everyday Corporate Essential</h3>
-                <p className="text-white/60 font-body text-sm leading-relaxed mb-6 max-w-md">
-                  Refined formalwear designed for daily elegance and professional ease.
-                </p>
-                <div className="flex flex-col md:items-end gap-2 mb-8 text-white/40 text-[10px] font-body uppercase tracking-[0.2em]">
-                  <span className="flex items-center justify-end gap-3">Clean silhouette <span className="w-3 h-[1px] bg-white/20 hidden md:block"></span></span>
-                  <span className="flex items-center justify-end gap-3">Breathable fabric <span className="w-3 h-[1px] bg-white/20 hidden md:block"></span></span>
-                  <span className="flex items-center justify-end gap-3">Timeless style <span className="w-3 h-[1px] bg-white/20 hidden md:block"></span></span>
-                </div>
-                <Link to="/collection" className="inline-flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.25em] text-white border border-white/20 px-6 py-3 w-fit hover:bg-white hover:text-black transition-all duration-500">
-                   View Collection <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Block 3 */}
-            <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16 group">
-              <div className="w-full md:w-1/2 lg:w-5/12 overflow-hidden bg-[#111113] rounded-sm aspect-[4/5] relative border border-white/5">
-                <img 
-                  src="/images/suits_cover_1782652781025.png" 
-                  alt="Executive Menswear" 
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-[cubic-bezier(0.25,1,0.5,1)] opacity-90"
-                />
-              </div>
-              <div className="w-full md:w-1/2 lg:w-7/12 flex flex-col justify-center">
-                <h3 className="font-display text-3xl lg:text-4xl text-white tracking-tight mb-4">Executive Menswear</h3>
-                <p className="text-white/60 font-body text-sm leading-relaxed mb-6 max-w-md">
-                  Sharp tailoring and minimal formalwear for the modern professional.
-                </p>
-                <div className="flex flex-col gap-2 mb-8 text-white/40 text-[10px] font-body uppercase tracking-[0.2em]">
-                  <span className="flex items-center gap-3"><span className="w-3 h-[1px] bg-white/20"></span> Structured fit</span>
-                  <span className="flex items-center gap-3"><span className="w-3 h-[1px] bg-white/20"></span> Crisp finish</span>
-                  <span className="flex items-center gap-3"><span className="w-3 h-[1px] bg-white/20"></span> Premium detailing</span>
-                </div>
-                <Link to="/collection" className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-white border border-white/20 px-6 py-3 w-fit hover:bg-white hover:text-black transition-all duration-500">
-                   Explore Men <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <WorkwearBento />
 
 
       {/* STATIC VIDEO MANIFESTO */}
