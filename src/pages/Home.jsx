@@ -229,7 +229,7 @@ const Home = () => {
           </div>
 
           {/* Col 4: Action CTAs + slide progress lines */}
-          <div className="flex flex-col justify-end items-start md:items-end border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8 gap-4 mt-auto md:mt-0">
+          <div className="flex flex-col justify-end items-start md:items-end pt-6 md:pt-0 md:pl-8 gap-4 mt-auto md:mt-0">
             <Link 
               to="/collection"
               className="bg-white text-black border border-white px-10 py-4 rounded-none text-[10px] uppercase tracking-[0.25em] font-semibold font-body hover:bg-transparent hover:text-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] w-full md:w-auto text-center"
